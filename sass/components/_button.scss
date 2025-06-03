@@ -12,11 +12,12 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
-        font-size: 1.6rem;
+        font-size: v.$default-font-size;
 
     }
 
     &:hover {
+
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba(v.$color-black, 0.2);
 
@@ -56,5 +57,32 @@
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: v.$default-font-size;
+        color: v.$color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid v.$color-primary;
+        padding: 3px;
+        transition: all .2s;
+
+    }
+
+    &:hover {
+        background-color: v.$color-primary;
+        color: v.$color-white;
+        box-shadow: 0 1rem 2rem rgba(v.$color-black, 0.15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba(v.$color-black, 0.15);
+        transform: translateY(0);
     }
 }
